@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Trilateral Leadership | The Journey</title>
+    <meta name="description" content="Martin Beyst's journey to bring a new leadership framework into the world. Follow the adventure.">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --max-width: 750px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #fafafa;
+        }
+        
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+            margin: 2rem 0;
+        }
+        
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+        }
+        
+        .video-placeholder .play-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .journey-timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--accent);
+        }
+        
+        .journey-entry {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .journey-entry::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+        
+        .journey-entry.completed::before {
+            background: #27ae60;
+        }
+        
+        .journey-entry.current::before {
+            background: #f39c12;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+        }
+        
+        .journey-entry .date {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .journey-entry h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .definition-box {
+            background: var(--light);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.05rem;
+        }
+        
+        .honesty-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid var(--primary);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            color: #555;
+        }
+        
+        .framework-brief {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .framework-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+        
+        .framework-item h4 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .cta-button:hover {
+            background: #2980b9;
+        }
+        
+        .cta-button.secondary {
+            background: white;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        
+        .cta-button.secondary:hover {
+            background: var(--light);
+        }
+        
+        .follower-count {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        
+        .follower-count strong {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        
+        form {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        
+        .social-links a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dynamic Trilateral Leadership</h1>
+        <p class="subtitle">One person's attempt to bring a better way of leading into the world</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#story">The Story</a></li>
+            <li><a href="#journey">The Journey</a></li>
+            <li><a href="#framework">The Framework</a></li>
+            <li><a href="#follow">Follow Along</a></li>
+            <li><a href="#join">Join the Pilot</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <!-- MARTIN'S STORY VIDEO SECTION -->
+        <section id="story">
+            <h2>Why This Exists</h2>
+            
+            <div class="video-container">
+                <!-- Replace this with your actual video embed -->
+                <!-- Options: YouTube, Vimeo, or self-hosted video -->
+                <div class="video-placeholder">
+                    <div class="play-button">▶</div>
+                    <p><strong>Video: Martin's Story</strong></p>
+                    <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">[Record your story here — see script below]</p>
+                </div>
+                <!-- 
+                When you have your video:
+                
+                For YouTube:
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                
+                For Vimeo:
+                <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                
+                For self-hosted:
+                <video controls>
+                    <source src="your-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                -->
+            </div>
+            
+            <div class="honesty-box">
+                <strong>The honest version:</strong> I've spent years watching organizations make the same mistakes. Good people. Bad structures. I've seen what happens when one person carries too much, when dissent goes silent, when succession becomes impossible. This framework is my attempt to build something better. I don't know if it will work. But I have to try.
+            </div>
+            
+            <blockquote>
+                Triangles hold their shape under pressure. Human systems should learn from the strongest structures we already know.
+            </blockquote>
+        </section>
+        
+        <!-- THE JOURNEY TIMELINE -->
+        <section id="journey">
+            <h2>Following the Journey</h2>
+            
+            <p>This isn't a polished launch. This is a public experiment. I'm documenting the journey — the wins, the rejections, the lessons — as it happens. Follow along if you're curious, if you're skeptical, or if you want to try this yourself.</p>
+            
+            <div class="follower-count">
+                <strong id="follower-number">0</strong> people following this journey
+                <br>
+                <span style="font-size: 0.9rem; color: #666;">[Update this manually or connect to email list]</span>
+            </div>
+            
+            <div class="journey-timeline">
+                <div class="journey-entry completed">
+                    <div class="date">June 2026</div>
+                    <h4>The Framework Takes Shape</h4>
+                    <p>After years of observing organizational dysfunction, I synthesize the core idea: triads as the minimum stable unit of leadership, with recorded dissent and dynamic authority. The name sticks: Dynamic Trilateral Leadership.</p>
+                </div>
+                
+                <div class="journey-entry completed">
+                    <div class="date">July 2026</div>
+                    <h4>Intellectual Lineage Documented</h4>
+                    <p>Researched the foundations: Simmel's triad theory (1890s), Social Trinitarians (Moltmann, Volf, LaCugna), Greenleaf's servant leadership. The pieces exist — the synthesis is new. Published the lineage honestly.</p>
+                </div>
+                
+                <div class="journey-entry current">
+                    <div class="date">Now</div>
+                    <h4>Seeking Pilot Organizations</h4>
+                    <p><strong>Current challenge:</strong> Finding 2-3 organizations willing to test this unproven framework. No track record yet. Just an idea and honest documentation. Looking for brave leaders.</p>
+                </div>
+                
+                <div class="journey-entry">
+                    <div class="date">[Coming]</div>
+                    <h4>First Pilot Begins</h4>
+                    <p>First organization implements a triad. We'll document what breaks, what works, what surprises us. Decision logs will be published (with permission).</p>
+                </div>
+                
+                <div class="journey-entry">
+                    <div class="date">[Coming]</div>
+                    <h4>University Partnership?</h4>
+                    <p>Exploring research partnerships — PhD students, grant applications, empirical validation. Academic credibility could help adoption.</p>
+                </div>
+                
+                <div class="journey-entry">
+                    <div class="date">[Coming]</div>
+                    <h4>First Public Case Study</h4>
+                    <p>After 3-6 months of pilot data, publish the first real case study. Not theory — actual results, actual lessons.</p>
+                </div>
+                
+                <div class="journey-entry">
+                    <div class="date">[Coming]</div>
+                    <h4>Open-Source Release</h4>
+                    <p>Full framework released under CC BY-NC 4.0. Free for anyone to use. Implementation guides, templates, training materials all public.</p>
+                </div>
+            </div>
+            
+            <p style="font-style: italic; color: #666;">
+                Want to see something on this timeline? Disagree with the approach? <a href="#follow" style="color: var(--accent);">Follow along and tell me what you think.</a>
+            </p>
+        </section>
+        
+        <!-- THE FRAMEWORK (BRIEF VERSION) -->
+        <section id="framework">
+            <h2>The Framework (Brief Version)</h2>
+            
+            <div class="definition-box">
+                <strong>Dynamic Trilateral Leadership is an organizational structure where all significant decisions are made by three-person cells with recorded dissent, dynamic authority based on competence rather than title, and AI as advisory only.</strong>
+            </div>
+            
+            <div class="framework-brief">
+                <div class="framework-item">
+                    <h4>1. The Triad</h4>
+                    <p>No person should lead alone. Three people — small enough for accountability, large enough for disagreement.</p>
+                </div>
+                
+                <div class="framework-item">
+                    <h4>2. 2/3 Voting + Dissent</h4>
+                    <p>Unanimity preferred. 2/3 proceeds. Dissent is recorded and travels with the decision.</p>
+                </div>
+                
+                <div class="framework-item">
+                    <h4>3. Dynamic Authority</h4>
+                    <p>Authority shifts based on proximity to facts, track record, vindicated dissent — not static title.</p>
+                </div>
+                
+                <div class="framework-item">
+                    <h4>4. AI Advisory Only</h4>
+                    <p>AI recommends. Humans decide. Everything logged. Responsibility stays human.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 1.5rem;">
+                <a href="#" class="cta-button secondary" onclick="alert('Full documentation coming after first pilot data is collected.'); return false;">Read Full Documentation (Coming Soon)</a>
+            </p>
+        </section>
+        
+        <!-- FOLLOW ALONG -->
+        <section id="follow">
+            <h2>Follow the Journey</h2>
+            
+            <p>I'm sharing this journey publicly — the progress, the setbacks, the lessons. If you're curious, skeptical, or want to learn from the experiment, follow along.</p>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/YOUR_TWITTER" target="_blank">Twitter/X</a>
+                <a href="mailto:YOUR_EMAIL">Email</a>
+            </div>
+            
+            <form id="follow-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="interest">Why are you following?</label>
+                <select id="interest" name="interest">
+                    <option value="">Select...</option>
+                    <option value="curious">Just curious about the idea</option>
+                    <option value="skeptical">Skeptical but want to see what happens</option>
+                    <option value="might-pilot">Might want to pilot this</option>
+                    <option value="researcher">Researcher / academic</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="note">Anything you want to say? (optional)</label>
+                <textarea id="note" name="note" placeholder="Questions, thoughts, challenges..."></textarea>
+                
+                <button type="submit" class="cta-button">Follow the Journey</button>
+                
+                <p class="form-note" style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                    No spam. Occasional updates on the journey. Unsubscribe anytime.
+                </p>
+            </form>
+        </section>
+        
+        <!-- JOIN THE PILOT -->
+        <section id="join">
+            <h2>Join the Pilot</h2>
+            
+            <p>Following is great. Piloting is better. If you lead an organization (church, nonprofit, Christian business) and you're willing to test this framework, let's talk.</p>
+            
+            <div class="honesty-box">
+                <strong>What you're signing up for:</strong> This is unproven. You're not adopting a polished system — you're helping build one. 3-month minimum commitment. Monthly check-ins. Honest feedback required.
+            </div>
+            
+            <form id="pilot-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <label for="pilot-name">Your Name</label>
+                <input type="text" id="pilot-name" name="name" required>
+                
+                <label for="pilot-email">Email</label>
+                <input type="email" id="pilot-email" name="email" required>
+                
+                <label for="organization">Organization</label>
+                <input type="text" id="organization" name="organization" required>
+                
+                <label for="role">Your Role</label>
+                <input type="text" id="role" name="role" required>
+                
+                <label for="size">Organization Size</label>
+                <select id="size" name="size">
+                    <option value="">Select...</option>
+                    <option value="1-10">1-10 people</option>
+                    <option value="11-50">11-50 people</option>
+                    <option value="51-200">51-200 people</option>
+                    <option value="200+">200+ people</option>
+                </select>
+                
+                <label for="type">Organization Type</label>
+                <select id="type" name="type">
+                    <option value="">Select...</option>
+                    <option value="church">Church / Ministry</option>
+                    <option value="nonprofit">Nonprofit / NGO</option>
+                    <option value="business">Christian Business</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="why">Why are you interested? What problem are you hoping this might solve?</label>
+                <textarea id="why" name="why" required></textarea>
+                
+                <button type="submit" class="cta-button">Let's Talk</button>
+            </form>
+        </section>
+        
+        <!-- CONTACT -->
+        <section>
+            <h2>Questions? Challenges? Ideas?</h2>
+            
+            <p>This isn't a monologue. If you see holes in the framework, better ways to test it, or organizations I should approach — tell me.</p>
+            
+            <p><strong>Email:</strong> <a href="mailto:YOUR_EMAIL" style="color: var(--accent);">YOUR_EMAIL</a></p>
+            
+            <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                I read every message. I can't promise to respond to all of them, but I do read them all.
+            </p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Dynamic Trilateral Leadership v0.1 &copy; 2026 Martin Beyst</p>
+        <p>Documenting the journey of bringing a new leadership framework into the world.</p>
+        <p>Framework will be released under CC BY-NC 4.0 after pilot learnings incorporated.</p>
+    </footer>
+    
+    <script>
+        // Simple form handling
+        document.getElementById('follow-form').addEventListener('submit', function(e) {
+            alert('To make this form work: 1) Go to formspree.io, 2) Create a free form, 3) Replace YOUR_FORMSPREE_ID in the form action with your actual form ID');
+            e.preventDefault();
+        });
+        
+        document.getElementById('pilot-form').addEventListener('submit', function(e) {
+            alert('To make this form work: 1) Go to formspree.io, 2) Create a free form, 3) Replace YOUR_FORMSPREE_ID in the form action with your actual form ID');
+            e.preventDefault();
+        });
+        
+        // Update follower count manually (or connect to email list API)
+        // document.getElementById('follower-number').textContent = '47'; // Example
+    </script>
+</body>
+</html>
