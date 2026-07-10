@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- DTL Logo: Three interconnected nodes forming a stable triangle -->
+  
+  <!-- Background circle (optional, can remove for transparent) -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#3498db" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Three nodes representing the triad -->
+  <circle cx="100" cy="40" r="12" fill="#3498db"/>
+  <circle cx="50" cy="130" r="12" fill="#3498db"/>
+  <circle cx="150" cy="130" r="12" fill="#3498db"/>
+  
+  <!-- Connecting lines showing structural relationship -->
+  <line x1="100" y1="40" x2="50" y2="130" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <line x1="100" y1="40" x2="150" y2="130" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  <line x1="50" y1="130" x2="150" y2="130" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Small center point showing balance -->
+  <circle cx="100" cy="100" r="4" fill="#2c3e50" opacity="0.5"/>
+</svg>
