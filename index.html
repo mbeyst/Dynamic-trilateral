@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Trilateral Leadership | The Journey</title>
-    <meta name="description" content="Martin Beyst's journey to bring a new leadership framework into the world. Follow the adventure.">
+    <title>Dynamic Trilateral Leadership</title>
+    <meta name="description" content="A framework for structured, accountable, humane decision-making.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
         :root {
@@ -122,107 +122,12 @@
             margin: 2rem 0;
         }
         
-        .video-container iframe,
-        .video-container video {
+        .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-        }
-        
-        .video-placeholder {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: white;
-            background: linear-gradient(135deg, var(--dark), var(--primary));
-        }
-        
-        .video-placeholder .play-button {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-        
-        .journey-timeline {
-            position: relative;
-            padding-left: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .journey-timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--accent);
-        }
-        
-        .journey-entry {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .journey-entry::before {
-            content: '';
-            position: absolute;
-            left: -2rem;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--accent);
-        }
-        
-        .journey-entry.completed::before {
-            background: #27ae60;
-        }
-        
-        .journey-entry.current::before {
-            background: #f39c12;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.3); opacity: 0.7; }
-        }
-        
-        .journey-entry .date {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 0.5rem;
-        }
-        
-        .journey-entry h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .definition-box {
-            background: var(--light);
-            border-left: 4px solid var(--accent);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            font-size: 1.05rem;
         }
         
         .honesty-box {
@@ -239,6 +144,14 @@
             padding-left: 1.5rem;
             margin: 1.5rem 0;
             color: #555;
+        }
+        
+        .definition-box {
+            background: var(--light);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.05rem;
         }
         
         .framework-brief {
@@ -290,19 +203,6 @@
             background: var(--light);
         }
         
-        .follower-count {
-            background: var(--light);
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            margin: 1.5rem 0;
-        }
-        
-        .follower-count strong {
-            font-size: 1.5rem;
-            color: var(--accent);
-        }
-        
         form {
             background: white;
             border: 1px solid #ddd;
@@ -331,6 +231,15 @@
         textarea {
             min-height: 100px;
             resize: vertical;
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
         }
         
         footer {
@@ -388,18 +297,18 @@
     
     <nav>
         <ul>
-            <li><a href="#story">The Story</a></li>
-            <li><a href="#journey">The Journey</a></li>
+            <li><a href="#why">Why This Exists</a></li>
             <li><a href="#framework">The Framework</a></li>
             <li><a href="lineage.html">Lineage</a></li>
-            <li><a href="#follow">Follow Along</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="#follow">Follow</a></li>
             <li><a href="#join">Join the Pilot</a></li>
         </ul>
     </nav>
     
     <main>
-        <!-- MARTIN'S STORY VIDEO SECTION -->
-        <section id="story">
+        <!-- INTRO VIDEO SECTION -->
+        <section id="why">
             <h2>Why This Exists</h2>
             
             <div class="video-container">
@@ -420,9 +329,7 @@
                 Triangles hold their shape under pressure. Human systems should learn from the strongest structures we already know.
             </blockquote>
             
-            <h3>Why This Exists</h3>
-            
-            <p>You've been in the room.</p>
+            <h3>You've been in the room</h3>
             
             <p>The decision that needed making was too big for one person. But one person decided it anyway.</p>
             
@@ -464,51 +371,6 @@
             <p><strong>This is leadership by structure, not by committee.</strong></p>
         </section>
         
-        <!-- THE JOURNEY TIMELINE -->
-        <section id="journey">
-            <h2>Following the Journey</h2>
-            
-            <p>This isn't a polished launch. This is a public experiment. I'm documenting the journey — the wins, the rejections, the lessons — as it happens. Follow along if you're curious, if you're skeptical, or if you want to try this yourself.</p>
-            
-            <div class="follower-count">
-                <strong id="follower-number">0</strong> people following this journey
-                <br>
-                <span style="font-size: 0.9rem; color: #666;">[Update this manually or connect to email list]</span>
-            </div>
-            
-            <div class="journey-timeline">
-                <div class="journey-entry completed">
-                    <div class="date">June 2026</div>
-                    <h4>The Framework Takes Shape</h4>
-                    <p>After years of observing organizational dysfunction, I synthesize the core idea: triads as the minimum stable unit of leadership, with recorded dissent and dynamic authority. The name sticks: Dynamic Trilateral Leadership.</p>
-                </div>
-                
-                <div class="journey-entry completed">
-                    <div class="date">July 2026</div>
-                    <h4>Intellectual Lineage Documented</h4>
-                    <p>Researched the foundations: Simmel's triad theory (1890s), Social Trinitarians (Moltmann, Volf, LaCugna), Greenleaf's servant leadership. The pieces exist — the synthesis is new. Published the lineage honestly.</p>
-                </div>
-                
-                <div class="journey-entry current">
-                    <div class="date">Now</div>
-                    <h4>Seeking Pilot Organizations</h4>
-                    <p><strong>Current challenge:</strong> Finding 2-3 organizations willing to test this unproven framework. No track record yet. Just an idea and honest documentation. Looking for brave leaders.</p>
-                </div>
-                
-                <div class="journey-entry">
-                    <div class="date">[Coming]</div>
-                    <h4>First Pilot Begins</h4>
-                    <p>Three-person triad starts using DTL for real decisions. Decision logs published (anonymized). Speed, quality, relationship health measured.</p>
-                </div>
-                
-                <div class="journey-entry">
-                    <div class="date">[Coming]</div>
-                    <h4>First Public Testimony</h4>
-                    <p>A pilot leader shares: what worked, what didn't, whether they're continuing. No marketing — just honest reporting.</p>
-                </div>
-            </div>
-        </section>
-        
         <!-- THE FRAMEWORK -->
         <section id="framework">
             <h2>The Framework</h2>
@@ -540,7 +402,7 @@
             </div>
             
             <a href="lineage.html" class="cta-button">Read the Full Framework</a>
-            <a href="#join" class="cta-button secondary">Join the Pilot</a>
+            <a href="stories.html" class="cta-button secondary">See It in Action</a>
         </section>
         
         <!-- FOLLOW ALONG -->
