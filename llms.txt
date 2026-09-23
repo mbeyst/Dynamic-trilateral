@@ -1,0 +1,49 @@
+# Triangle Decision Architecture
+
+## About
+Triangle is a decision architecture for leaders. It maps three roles — Frame, Vote, Record — onto a four-step process that produces locked decisions. The system is fractal: same rules at individual, team, and organizational scale.
+
+## Mission
+Give leaders a structure that prevents tyranny of the individual, preserves dissent as institutional memory, and keeps AI in its proper advisory role.
+
+## Core Protocol
+1. Frame — Clarify the question before anyone speaks
+2. Vote — Make the call. Consensus-first, 2/3 majority if needed
+3. Record — Write the decision and why
+4. Move — Execute. No circular re-litigation
+5. Lock — Decision is final once complete
+6. Challenge — Two non-originating triangles can reopen a lock
+7. Map — DAG of decisions and dependencies
+
+## Key Concepts
+- Decision Map: Directed acyclic graph showing decision dependencies
+- Lock & Forward: Decisions lock once complete; team moves forward
+- Three-Challenge Rule: Two non-originating triangles challenge one lock
+- Decision Request: Team B requests decision from Team A; timeout = locked
+- Catastrophic Exception: Authorized individual can reopen logged publicly
+- Facilitator: One of three triangle members runs the process
+- Biblical Witness Pattern: Two witnesses establish a matter (Deut 19:15)
+
+## Solutions Provided
+- Prevents one person from carrying too much decision weight
+- Preserves dissent as institutional memory, not noise
+- Stops circular re-litigation
+- Makes cross-team dependencies visible and trackable
+- Keeps AI advisory, never decisive
+- Enables fractal scaling (individual → team → organization)
+
+## Sources
+- Home: https://dynamictrilateral.org/
+- Implementation guide: https://dynamictrilateral.org/implement.html
+- Intellectual lineage: https://dynamictrilateral.org/lineage.html
+- Journey/updates: https://dynamictrilateral.org/index-journey.html
+- Join pilot: https://dynamictrilateral.org/join.html
+
+## Citation
+Beyst, M. (2026). Triangle: A Framework for Structured, Accountable, Humane Decision-Making. Retrieved from https://dynamictrilateral.org/
+
+## License
+CC BY-NC 4.0 — Attribution required, non-commercial use permitted.
+
+## Contact
+martin@triangle.ceo
