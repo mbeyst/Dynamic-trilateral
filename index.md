@@ -1,4 +1,4 @@
-# Dynamic Trilateral Leadership
+# Triangle
 ## A Framework for Structured, Accountable, Humane Decision-Making
 
 ---
@@ -17,7 +17,7 @@ Six months later, the decision went wrong. The dissent had been there. It wasn't
 
 Good people make bad decisions when the structure concentrates too much pressure on too few points. Institutions become brittle. Accountability blurs. Dissent goes silent. Succession becomes unthinkable.
 
-Dynamic Trilateral Leadership was built to solve this.
+Triangle was built to solve this.
 
 ---
 
@@ -50,7 +50,7 @@ DTL does not promise better leaders. It promises **better structures for fallen 
 
 ## The One-Sentence Definition
 
-**Dynamic Trilateral Leadership is an organizational structure where all significant decisions are made by three-person cells with recorded dissent, dynamic authority based on competence rather than title, and AI as advisory only.**
+**Triangle is an organizational structure where all significant decisions are made by three-person cells with recorded dissent, dynamic authority based on competence rather than title, and AI as advisory only.**
 
 ---
 
@@ -167,7 +167,7 @@ The synthesis is the innovation.
 
 ## About
 
-Dynamic Trilateral Leadership was developed by **Martin Beyst**, a British communication coach and organizational designer based in southern Spain.
+Triangle was developed by **Martin Beyst**, a British communication coach and organizational designer based in southern Spain.
 
 The framework emerged from observing repeated patterns: decisions that went wrong because dissent wasn't recorded, leaders who became brittle because no one could challenge them, and organizations that collapsed because succession depended on one person.
 

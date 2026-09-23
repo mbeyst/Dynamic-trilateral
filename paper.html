@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle: A Reputation-Based Framework for AI Source Credibility</title>
+    <meta name="description" content="A paper by Martin Beyst proposing Triangle — a framework for AI source credibility based on tracked human decision quality.">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --max-width: 800px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: #fafafa;
+        }
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        header p { opacity: 0.9; font-size: 1.1rem; }
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        nav a:hover { background: rgba(255,255,255,0.1); }
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+        h1.paper-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        .author {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        .affiliation {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        .date { color: #999; font-size: 0.9rem; margin-bottom: 2rem; }
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem 0;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.3rem;
+        }
+        h3 {
+            color: var(--dark);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+        p { margin-bottom: 1rem; }
+        .abstract {
+            background: var(--light);
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+            margin: 2rem 0;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+        th {
+            background: var(--primary);
+            color: white;
+        }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .references p {
+            font-size: 0.9rem;
+            padding-left: 2rem;
+            text-indent: -2rem;
+            margin-bottom: 0.5rem;
+        }
+        .citation-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 2rem 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+        footer a { color: white; text-decoration: underline; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.4rem; }
+            nav ul { flex-direction: column; gap: 0.5rem; }
+            h1.paper-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Triangle</h1>
+        <p>Finding the value in every voice</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lineage.html">Lineage</a></li>
+            <li><a href="paper.html">Paper</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 class="paper-title">Triangle: A Reputation-Based Framework for AI Source Credibility</h1>
+        <p class="author"><strong>Martin Beyst</strong></p>
+        <p class="affiliation">triangle.ceo</p>
+        <p class="date">July 2026</p>
+
+        <div class="citation-box">
+            Beyst, M. (2026). Triangle: A Reputation-Based Framework for AI Source Credibility. triangle.ceo.
+        </div>
+
+        <div class="abstract">
+            <strong>Abstract:</strong> Artificial intelligence systems increasingly aggregate information from diverse sources without reliable mechanisms for distinguishing credible sources from unreliable ones. Current approaches — popularity-based ranking (search engines), credential-based authority (academic citation), and alignment training (RLHF) — each fail to address a fundamental problem: tracking the actual decision quality of information sources over time. This paper proposes Triangle, a framework that applies reputation system principles to AI source credibility by tracking human decision outcomes within triadic decision structures. Triangle combines Georg Simmel's sociological insight that triads are the smallest stable social unit, Social Trinitarian theology's model of distinct-yet-inseparable persons in unity, and AI-facilitated decision recording to create a living architecture where authority flows to demonstrated competence rather than static credentials. The result is a mechanism by which AI can weight sources not by popularity or credentials, but by tracked track record — a capability not currently addressed in AI safety, reputation systems, or epistemic trust literature.
+        </div>
+
+        <h2>1. Introduction</h2>
+        <p>AI systems face a credibility crisis. Large language models generate confident outputs from sources of varying — and often unknown — quality. Hallucinations, misinformation propagation, and the inability to distinguish expert insight from popular opinion are well-documented failures (OpenAI, 2023; Bender et al., 2021).</p>
+        <p>Existing solutions fall into three categories:</p>
+        <ol style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li><strong>Training data curation</strong> — filtering sources during model training</li>
+            <li><strong>Alignment techniques</strong> — RLHF, constitutional AI, guardrails</li>
+            <li><strong>Retrieval augmentation</strong> — grounding outputs in cited sources</li>
+        </ol>
+        <p>None of these address the core problem: <strong>how does an AI system know which sources have been consistently right over time?</strong></p>
+        <p>Search engines use popularity (PageRank). Academia uses citation counts. Social media uses engagement metrics. None of these measure actual decision quality — they measure attention, not accuracy.</p>
+
+        <h2>2. Background</h2>
+
+        <h3>2.1 Reputation Systems</h3>
+        <p>Reputation systems have been studied extensively in e-commerce (eBay, Amazon), peer-to-peer networks, and online communities (Resnick et al., 2000; Jøsang et al., 2007). Wikipedia defines a reputation system as "a program or algorithm that allow users of an online community to rate each other in order to build trust through reputation." These systems track ratings, not decision outcomes.</p>
+
+        <h3>2.2 AI Safety and Alignment</h3>
+        <p>AI safety research focuses on alignment (ensuring AI behaves according to human values), guardrails (preventing harmful outputs), and oversight (human-in-the-loop systems). Recent work includes constitutional AI (Anthropic, 2022), RLHF (Christiano et al., 2017), and multi-agent verification protocols (Negozio, 2025). These approaches focus on constraining AI behavior, not on providing AI with a mechanism for evaluating source credibility through tracked human decision quality.</p>
+
+        <h3>2.3 Epistemic Trust</h3>
+        <p>Epistemic trust — the decision to trust another as a source of information — is studied in psychology and philosophy but has limited application to AI systems. Wikipedia does not maintain articles on "epistemic trust" or "trust in artificial intelligence" as of July 2026, indicating the concept remains underdeveloped in public discourse.</p>
+
+        <h3>2.4 Triadic Social Structures</h3>
+        <p>Georg Simmel (1858-1918) established that triads (three-person groups) are the smallest stable social unit. Unlike dyads, triads survive the departure of one member. Unlike larger groups, triads are small enough for every voice to be heard and large enough for dissent to be mediated (Simmel, 1902). This insight has not been operationalized into a decision-making framework with AI facilitation.</p>
+
+        <h2>3. The Gap</h2>
+        <p>A systematic review of arXiv (search: "reputation system" + "artificial intelligence", July 2026) returned 17 papers, none of which propose using tracked human decision quality as a mechanism for AI source weighting.</p>
+        <p>The existing literature splits into two disconnected camps:</p>
+        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li><strong>Reputation systems research</strong> focuses on e-commerce, peer-to-peer networks, and blockchain identity — not on decision quality or AI source credibility</li>
+            <li><strong>AI safety research</strong> focuses on alignment, guardrails, and training data — not on reputation-based source evaluation derived from human decision track records</li>
+        </ul>
+        <p>No published work connects:</p>
+        <ol style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li>Human decision-making in structured triads</li>
+            <li>AI-facilitated recording of decision outcomes</li>
+            <li>Reputation scoring based on decision quality over time</li>
+            <li>Application of that scoring to AI source credibility weighting</li>
+        </ol>
+        <p>This is the gap Triangle addresses.</p>
+
+        <h2>4. The Triangle Framework</h2>
+
+        <h3>4.1 Core Principles</h3>
+        <p>Triangle is a decision architecture built on three principles:</p>
+        <ol style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li><strong>Triadic decisions</strong>: Significant decisions are made by three people, not one. Two agree — the decision moves. One dissents — the dissent is recorded and preserved.</li>
+            <li><strong>AI facilitation</strong>: AI records inputs, tracks participation, aggregates outcomes, and publishes consensus. AI does not decide — humans decide. AI facilitates transparency.</li>
+            <li><strong>Dynamic authority</strong>: The system tracks who makes good decisions, who dissent turns out to be right, and who is best informed in each context. Over time, authority flows to demonstrated competence — not title, tenure, or popularity.</li>
+        </ol>
+
+        <h3>4.2 Theological Foundation</h3>
+        <p>Triangle's structure is inspired by Social Trinitarian theology — the understanding of God as three persons in perfect unity, distinct yet inseparable (Moltmann, 1981; Volf, 1998; LaCugna, 1991). This is not merely metaphorical. The theological foundation provides:</p>
+        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li>A model of shared authority without hierarchy</li>
+            <li>A model of distinction without division</li>
+            <li>A model of unity without uniformity</li>
+        </ul>
+        <p>This foundation is explicitly acknowledged, not hidden. The framework remains applicable to secular organizations, but its architectural inspiration is named honestly.</p>
+
+        <h3>4.3 How It Works</h3>
+        <p><strong>Before the meeting</strong>: All participants receive the agenda.</p>
+        <p><strong>During the meeting</strong>: Three people per triangle. Everyone speaks. AI records every input against each agenda item. AI tracks speaking time and ensures equal participation.</p>
+        <p><strong>After the meeting</strong>: AI aggregates all inputs. AI shows where triangles agree and where they dissent. AI produces a final report. Dissent travels with the decision — it is not erased.</p>
+        <p><strong>Over time</strong>: The system tracks:</p>
+        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li>Who is best in what context</li>
+            <li>When difference leads to insight</li>
+            <li>Who makes the best decisions</li>
+        </ul>
+        <p>Authority morphs. It flows to competence. Not title. Not tenure. Competence.</p>
+        <p><strong>At scale</strong>: Triangles coordinate with other triangles. One triangle decides locally. Multiple triangles agree — organization-wide. The more triangles agree, the more authority a decision carries.</p>
+
+        <h2>5. Application to AI Source Credibility</h2>
+        <p>The core insight of this paper is that Triangle's reputation mechanism — tracking human decision quality over time — can be applied to the problem of AI source credibility.</p>
+
+        <h3>5.1 The Mechanism</h3>
+        <p>If Triangle is deployed across organizations, the system accumulates a database of:</p>
+        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li>Individual decisions and their outcomes</li>
+            <li>Dissent records and whether dissent was retrospectively validated</li>
+            <li>Context-specific competence (who is best in what domain)</li>
+            <li>Decision quality scores aggregated over time</li>
+        </ul>
+        <p>This data constitutes a <strong>reputation score for decision-making</strong> — not based on credentials, popularity, or citation counts, but on actual tracked outcomes.</p>
+
+        <h3>5.2 AI Source Weighting</h3>
+        <p>An AI system drawing on Triangle's database could weight sources as follows:</p>
+        <table>
+            <tr><th>Signal</th><th>Traditional AI</th><th>Triangle-Enabled AI</th></tr>
+            <tr><td>Source popularity</td><td>PageRank, engagement metrics</td><td>Not used</td></tr>
+            <tr><td>Source credentials</td><td>Academic affiliation, citation count</td><td>Supporting signal only</td></tr>
+            <tr><td>Decision track record</td><td>Not available</td><td><strong>Primary signal</strong></td></tr>
+            <tr><td>Dissent validation</td><td>Not tracked</td><td>Sources whose dissent was retrospectively right receive higher weight</td></tr>
+            <tr><td>Contextual competence</td><td>Not tracked</td><td>Sources weighted by domain-specific track record</td></tr>
+        </table>
+
+        <h3>5.3 Why This Is Different</h3>
+        <p>Current AI systems treat all sources equally during aggregation, then apply post-hoc filtering. Triangle enables <strong>pre-aggregation credibility scoring</strong> based on how sources have actually performed in real decisions over time.</p>
+        <p>This is analogous to the difference between:</p>
+        <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li>Asking everyone in a crowd for advice (current AI)</li>
+            <li>Asking only those who have been consistently right in this domain (Triangle-enabled AI)</li>
+        </ul>
+
+        <h2>6. Discussion</h2>
+
+        <h3>6.1 Implications</h3>
+        <p>If Triangle's reputation mechanism were applied at scale, it could:</p>
+        <ol style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li><strong>Reduce AI hallucinations</strong> — by weighting sources with strong decision track records</li>
+            <li><strong>Surface underrepresented expertise</strong> — sources with strong track records but low visibility (no academic affiliation, low citation count) would gain authority</li>
+            <li><strong>Preserve dissent intelligence</strong> — sources whose dissent was retrospectively validated would be weighted higher, preventing the erasure of minority insight</li>
+            <li><strong>Create dynamic authority</strong> — credibility would shift as track records evolve, preventing the entrenchment of static "expert" status</li>
+        </ol>
+
+        <h3>6.2 Limitations</h3>
+        <ol style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li><strong>Cold start problem</strong> — Triangle requires accumulated decision data before reputation scoring is meaningful</li>
+            <li><strong>Gaming risk</strong> — reputation systems are vulnerable to coordinated manipulation; Triangle's triadic structure mitigates this by requiring three-person verification</li>
+            <li><strong>Domain transfer</strong> — competence in one domain does not guarantee competence in another; the system must track context-specific performance</li>
+            <li><strong>Adoption barrier</strong> — Triangle requires organizational adoption before individual reputation data accumulates</li>
+        </ol>
+
+        <h3>6.3 Future Work</h3>
+        <ol style="margin-left: 2rem; margin-bottom: 1rem;">
+            <li><strong>Empirical validation</strong> — deploy Triangle in pilot organizations and measure decision quality outcomes over 6-12 months</li>
+            <li><strong>Algorithm development</strong> — design the specific weighting algorithm for applying Triangle reputation scores to AI source evaluation</li>
+            <li><strong>Cross-organization reputation portability</strong> — investigate whether decision track records transfer across organizational boundaries</li>
+            <li><strong>Integration with existing AI systems</strong> — prototype Triangle-weighted retrieval augmentation in LLM systems</li>
+        </ol>
+
+        <h2>7. Conclusion</h2>
+        <p>AI systems cannot currently distinguish credible sources from unreliable ones based on tracked decision quality. This paper proposes Triangle — a framework that combines triadic decision structures, AI facilitation, and reputation tracking to create a mechanism by which AI can weight sources by actual track record rather than popularity or credentials.</p>
+        <p>The gap in the literature is clear: no published work connects human decision-making in structured triads, AI-facilitated outcome recording, reputation scoring, and AI source credibility weighting. Triangle addresses this gap with a concrete, implementable framework grounded in sociological theory (Simmel), theological architecture (Social Trinitarianism), and practical AI facilitation.</p>
+        <p>The implications extend beyond organizational decision-making. If deployed at scale, Triangle's reputation mechanism could provide AI systems with a fundamentally new way to evaluate source credibility — not by who is popular, not by who has credentials, but by who has been consistently right.</p>
+
+        <h2>References</h2>
+        <div class="references">
+            <p>Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? <em>Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency.</em></p>
+            <p>Christiano, P., Leike, J., Brown, T., Martic, M., Legg, S., & Amodei, D. (2017). Deep reinforcement learning from human preferences. <em>Advances in Neural Information Processing Systems, 30.</em></p>
+            <p>Jøsang, A., Ismail, R., & Boyd, C. (2007). A survey of trust and reputation systems for online service provision. <em>Decision Support Systems, 43</em>(2), 618-644.</p>
+            <p>LaCugna, C. M. (1991). <em>God for Us: The Trinity and Christian Life.</em> HarperSanFrancisco.</p>
+            <p>Moltmann, J. (1981). <em>The Trinity and the Kingdom.</em> Harper & Row.</p>
+            <p>Negozio, A. Y. (2025). Aligning artificial superintelligence via a multi-box protocol. <em>SuperIntelligence - Robotics - Safety and Alignment, 2</em>(5).</p>
+            <p>Resnick, P., Kuwabara, K., Zeckhauser, R., & Friedman, E. (2000). Reputation systems. <em>Communications of the ACM, 43</em>(12), 45-48.</p>
+            <p>Simmel, G. (1902). The number of members as determining the sociological form of the group. <em>American Journal of Sociology, 8</em>(1), 1-46.</p>
+            <p>Volf, M. (1998). <em>After Our Likeness: The Church as the Image of the Trinity.</em> Wm. B. Eerdmans Publishing.</p>
+        </div>
+
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd;">
+            <p><strong>Martin Beyst</strong><br>
+            Founder, Triangle<br>
+            <a href="https://triangle.ceo">triangle.ceo</a><br>
+            martin@triangle.ceo</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Triangle. Finding the value in every voice.</p>
+        <p><a href="index.html">Home</a> · <a href="lineage.html">Lineage</a> · <a href="paper.html">Paper</a> · <a href="join.html">Join</a></p>
+    </footer>
+</body>
+</html>

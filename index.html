@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Trilateral Leadership | The Journey</title>
-    <meta name="description" content="Martin Beyst's journey to bring a new leadership framework into the world. Follow the adventure.">
+    <title>Triangle — Frame it. Vote. Record. Move.</title>
+    <meta name="description" content="A framework for structured, accountable, humane decision-making.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
         :root {
@@ -114,7 +114,7 @@
         
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 8px;
@@ -122,107 +122,12 @@
             margin: 2rem 0;
         }
         
-        .video-container iframe,
-        .video-container video {
+        .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-        }
-        
-        .video-placeholder {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: white;
-            background: linear-gradient(135deg, var(--dark), var(--primary));
-        }
-        
-        .video-placeholder .play-button {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-        
-        .journey-timeline {
-            position: relative;
-            padding-left: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .journey-timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--accent);
-        }
-        
-        .journey-entry {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .journey-entry::before {
-            content: '';
-            position: absolute;
-            left: -2rem;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--accent);
-        }
-        
-        .journey-entry.completed::before {
-            background: #27ae60;
-        }
-        
-        .journey-entry.current::before {
-            background: #f39c12;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.3); opacity: 0.7; }
-        }
-        
-        .journey-entry .date {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 0.5rem;
-        }
-        
-        .journey-entry h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .definition-box {
-            background: var(--light);
-            border-left: 4px solid var(--accent);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            font-size: 1.05rem;
         }
         
         .honesty-box {
@@ -239,6 +144,14 @@
             padding-left: 1.5rem;
             margin: 1.5rem 0;
             color: #555;
+        }
+        
+        .definition-box {
+            background: var(--light);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.05rem;
         }
         
         .framework-brief {
@@ -290,19 +203,6 @@
             background: var(--light);
         }
         
-        .follower-count {
-            background: var(--light);
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            margin: 1.5rem 0;
-        }
-        
-        .follower-count strong {
-            font-size: 1.5rem;
-            color: var(--accent);
-        }
-        
         form {
             background: white;
             border: 1px solid #ddd;
@@ -331,6 +231,15 @@
         textarea {
             min-height: 100px;
             resize: vertical;
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
         }
         
         footer {
@@ -380,10 +289,11 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="logo.svg" alt="DTL Logo" class="logo">
+            <img src="logo.svg" alt="Triangle Logo" class="logo">
         </div>
-        <h1>Dynamic Trilateral Leadership</h1>
-        <p class="subtitle">An attempt to bring a better way of leading into the world</p>
+        <h1>Triangle</h1>
+        <p class="subtitle">Frame it. Vote. Record. Move.</p>
+        <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem;">A decision architecture for leaders</p>
     </header>
     
     <nav>
@@ -391,212 +301,169 @@
             <li><a href="#story">The Story</a></li>
             <li><a href="#journey">The Journey</a></li>
             <li><a href="#framework">The Framework</a></li>
+            <li><a href="implement.html">Implement</a></li>
             <li><a href="lineage.html">Lineage</a></li>
+            <li><a href="join.html">Join</a></li>
             <li><a href="#follow">Follow Along</a></li>
-            <li><a href="#join">Join the Pilot</a></li>
         </ul>
     </nav>
     
     <main>
-        <!-- MARTIN'S STORY VIDEO SECTION -->
-        <section id="story">
+        <!-- INTRO VIDEO SECTION -->
+        <section id="why">
             <h2>Why This Exists</h2>
             
             <div class="video-container">
                 <iframe width="560" height="315" 
                     src="https://www.youtube.com/embed/ly12nf62ZiA" 
-                    title="Dynamic Trilateral Leadership — Every Voice Has Value" 
+                    title="Triangle — Every Voice Has Value" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen>
                 </iframe>
             </div>
             
-            <div class="honesty-box">
-                <strong>The honest version:</strong> I've spent years watching organizations make the same mistakes. Good people. Bad structures. I've seen what happens when one person carries too much, when dissent goes silent, when succession becomes impossible. This framework is my attempt to build something better. I don't know if it will work. But I have to try.
-            </div>
+            <h3>The Problem</h3>
             
-            <blockquote>
-                Triangles hold their shape under pressure. Human systems should learn from the strongest structures we already know.
-            </blockquote>
+            <p>You've been in that meeting:</p>
             
-            <h3>Why This Exists</h3>
+            <ul style="margin-left: 2rem;">
+                <li>The decision that needed making was too big for one person</li>
+                <li>Someone disagreed but said nothing</li>
+                <li>Six months later, it went wrong</li>
+                <li>The dissent was there — but nobody recorded it</li>
+            </ul>
             
-            <p>You've been in the room.</p>
+            <p><strong>This is not a people problem. It's a structure problem.</strong></p>
             
-            <p>The decision that needed making was too big for one person. But one person decided it anyway.</p>
+            <p>One person decides → they burn out, or worse, they're wrong and nobody told them.</p>
             
-            <p>Someone in the meeting disagreed. They said nothing — or if they spoke, their objection vanished into the minutes nobody reads.</p>
+            <p>Everyone agrees → nothing moves, or dissent goes silent to keep the peace.</p>
             
-            <p>Six months later, the decision went wrong. The dissent had been there. It wasn't recorded. The institution learned nothing.</p>
+            <p>Speed or honesty. Pick one. Or so we're told.</p>
             
-            <p><strong>This is not a people problem. It is a structure problem.</strong></p>
+            <h3>The Solution</h3>
             
-            <p>Good people make bad decisions when the structure concentrates too much pressure on too few points. Institutions become brittle. Accountability blurs. Dissent goes silent. Succession becomes unthinkable.</p>
+            <p>Triangle gives you both.</p>
             
-            <p>Dynamic Trilateral Leadership was built to solve this.</p>
+            <p>Three people. Not one. Not a committee. Three. One of them is chosen as facilitator — first among equals, running the process.</p>
+            
+            <ul style="margin-left: 2rem;">
+                <li><strong>Frame</strong> → clarify the question before anyone speaks</li>
+                <li><strong>Vote</strong> → aim for consensus, 2/3 carries, dissent recorded</li>
+                <li><strong>Record</strong> → write the decision and why, no memory drift</li>
+                <li><strong>Move</strong> → execute, no circular re-litigation</li>
+                <li><strong>Lock</strong> → once complete, the decision is locked. Forward only.</li>
+            </ul>
+            
+            <p>That's it. Simple.</p>
             
             <h3>Who This Is For</h3>
             
-            <p><strong>You should care if:</strong></p>
+            <p>You should care if:</p>
             
-            <ul>
-                <li>You lead a team, department, or organization — and feel the weight of carrying judgment alone</li>
-                <li>You sit on a board or elder council — and have watched dissent disappear into unanimous votes</li>
-                <li>You are building something meant to outlast you — and succession keeps you awake at night</li>
-                <li>You are integrating AI into decisions — and worry about accountability when machines recommend and humans rubber-stamp</li>
-                <li>You care about institutional memory — and know that disagreement contains intelligence your organization cannot afford to lose</li>
+            <ul style="margin-left: 2rem;">
+                <li>You lead a team — and feel the weight of carrying judgment alone</li>
+                <li>You sit on a board — and have watched dissent disappear into unanimous votes</li>
+                <li>You're building something to outlast you — and succession keeps you awake</li>
+                <li>You're integrating AI — and worry about accountability when machines recommend</li>
             </ul>
             
-            <p><strong>This is not for everyone.</strong> It is for leaders who believe structure matters more than charisma, accountability matters more than harmony, and institutions should be built to survive their founders.</p>
+            <p><strong>This is not for everyone.</strong> It's for leaders who believe structure matters more than charisma, and institutions should survive their founders.</p>
             
             <h3>The Promise</h3>
             
-            <p>DTL does not promise better leaders. It promises <strong>better structures for fallen humans</strong>.</p>
+            <p>Triangle doesn't promise better leaders. It promises <strong>better structures for humans</strong>.</p>
             
-            <ul>
-                <li><strong>Triangles hold their shape under pressure.</strong> Graphene derives strength from repeated connection. Diamond structures do not depend on one isolated point carrying the load.</li>
-                <li><strong>Dissent travels with the decision.</strong> Disagreement is not noise. It is information. Most institutions lose it. DTL preserves it.</li>
-                <li><strong>Authority flows to competence, not title.</strong> The person closest to the facts leads the decision — not the person with the highest status.</li>
-                <li><strong>Machines advise, humans decide.</strong> AI will become very good at recommending. It must never become legitimate. Accountability stays human.</li>
+            <ul style="margin-left: 2rem;">
+                <li>Triangles hold their shape under pressure</li>
+                <li>Dissent travels with the decision — disagreement is information, not noise</li>
+                <li>Authority flows to competence, not title</li>
+                <li>Decisions lock — no circular re-litigation</li>
+                <li>Two independent voices can challenge a lock — witness, not majority</li>
+                <li>Machines advise, humans decide — always</li>
             </ul>
             
-            <p><strong>This is leadership by structure, not by committee.</strong></p>
+            <p><strong>Leadership by structure, not by committee.</strong></p>
         </section>
         
-        <!-- THE JOURNEY TIMELINE -->
-        <section id="journey">
-            <h2>Following the Journey</h2>
-            
-            <p>This isn't a polished launch. This is a public experiment. I'm documenting the journey — the wins, the rejections, the lessons — as it happens. Follow along if you're curious, if you're skeptical, or if you want to try this yourself.</p>
-            
-            <div class="follower-count">
-                <strong id="follower-number">0</strong> people following this journey
-                <br>
-                <span style="font-size: 0.9rem; color: #666;">[Update this manually or connect to email list]</span>
-            </div>
-            
-            <div class="journey-timeline">
-                <div class="journey-entry completed">
-                    <div class="date">June 2026</div>
-                    <h4>The Framework Takes Shape</h4>
-                    <p>After years of observing organizational dysfunction, I synthesize the core idea: triads as the minimum stable unit of leadership, with recorded dissent and dynamic authority. The name sticks: Dynamic Trilateral Leadership.</p>
-                </div>
-                
-                <div class="journey-entry completed">
-                    <div class="date">July 2026</div>
-                    <h4>Intellectual Lineage Documented</h4>
-                    <p>Researched the foundations: Simmel's triad theory (1890s), Social Trinitarians (Moltmann, Volf, LaCugna), Greenleaf's servant leadership. The pieces exist — the synthesis is new. Published the lineage honestly.</p>
-                </div>
-                
-                <div class="journey-entry current">
-                    <div class="date">Now</div>
-                    <h4>Seeking Pilot Organizations</h4>
-                    <p><strong>Current challenge:</strong> Finding 2-3 organizations willing to test this unproven framework. No track record yet. Just an idea and honest documentation. Looking for brave leaders.</p>
-                </div>
-                
-                <div class="journey-entry">
-                    <div class="date">[Coming]</div>
-                    <h4>First Pilot Begins</h4>
-                    <p>First organization implements a triad. We'll document what breaks, what works, what surprises us. Decision logs will be published (with permission).</p>
-                </div>
-                
-                <div class="journey-entry">
-                    <div class="date">[Coming]</div>
-                    <h4>University Partnership?</h4>
-                    <p>Exploring research partnerships — PhD students, grant applications, empirical validation. Academic credibility could help adoption.</p>
-                </div>
-                
-                <div class="journey-entry">
-                    <div class="date">[Coming]</div>
-                    <h4>First Public Case Study</h4>
-                    <p>After 3-6 months of pilot data, publish the first real case study. Not theory — actual results, actual lessons.</p>
-                </div>
-                
-                <div class="journey-entry">
-                    <div class="date">[Coming]</div>
-                    <h4>Open-Source Release</h4>
-                    <p>Full framework released under CC BY-NC 4.0. Free for anyone to use. Implementation guides, templates, training materials all public.</p>
-                </div>
-            </div>
-            
-            <p style="font-style: italic; color: #666;">
-                Want to see something on this timeline? Disagree with the approach? <a href="#follow" style="color: var(--accent);">Follow along and tell me what you think.</a>
-            </p>
-        </section>
-        
-        <!-- THE FRAMEWORK (BRIEF VERSION) -->
+        <!-- THE FRAMEWORK -->
         <section id="framework">
-            <h2>The Framework (Brief Version)</h2>
+            <h2>The Framework</h2>
             
             <div class="definition-box">
-                <strong>Dynamic Trilateral Leadership is an organizational structure where all significant decisions are made by three-person cells with recorded dissent, dynamic authority based on competence rather than title, and AI as advisory only.</strong>
+                <strong>Triangle</strong> is a decision architecture. Three people form each triangle. One of them is chosen as facilitator. Every decision follows four steps: Frame, Vote, Record, Move. Once complete, the decision is locked. The Decision Map shows dependencies. Two non-originating triangles can challenge a lock. AI advises, humans decide.
             </div>
+
+            <!-- DIAGRAM (moved to Lineage page) -->
             
             <div class="framework-brief">
                 <div class="framework-item">
-                    <h4>1. The Triad</h4>
-                    <p>No person should lead alone. Three people — small enough for accountability, large enough for disagreement.</p>
+                    <h4>1. The Triangle</h4>
+                    <p>Three people. One facilitator chosen from within. Small enough for accountability. Large enough for disagreement.</p>
                 </div>
                 
                 <div class="framework-item">
-                    <h4>2. 2/3 Voting + Dissent</h4>
-                    <p>Unanimity preferred. 2/3 proceeds. Dissent is recorded and travels with the decision.</p>
+                    <h4>2. Frame → Vote → Record → Move</h4>
+                    <p>The four-step process. Clarify the question. Make the call. Write it down. Execute. One decision, four steps, always.</p>
                 </div>
                 
                 <div class="framework-item">
-                    <h4>3. Dynamic Authority</h4>
-                    <p>Authority shifts based on proximity to facts, track record, vindicated dissent — not static title.</p>
+                    <h4>3. Consensus-First Voting</h4>
+                    <p>Facilitator aims for genuine consensus. When not reached, 2/3 carries. If facilitator is in minority, they represent the majority — not override it.</p>
                 </div>
                 
                 <div class="framework-item">
-                    <h4>4. AI Advisory Only</h4>
-                    <p>AI recommends. Humans decide. Everything logged. Responsibility stays human.</p>
+                    <h4>4. The Decision Map</h4>
+                    <p>A directed graph of decisions and dependencies. Some decisions depend on others. Some run in parallel. The Map makes the sequence visible.</p>
+                </div>
+                
+                <div class="framework-item">
+                    <h4>5. Lock & Forward</h4>
+                    <p>Once a decision completes all four steps, it is locked. No going back. The team moves to the next decision in the sequence.</p>
+                </div>
+                
+                <div class="framework-item">
+                    <h4>6. Challenge Rule</h4>
+                    <p>Two non-originating triangles can challenge a lock. Not a ratio — an absolute count of independent voices. Biblical witness pattern.</p>
+                </div>
+                
+                <div class="framework-item">
+                    <h4>7. AI Advisory</h4>
+                    <p>Machines recommend dependencies, flag conflicts, suggest sequences. Humans confirm. Accountability stays human — always.</p>
                 </div>
             </div>
             
-            <p style="margin-top: 1.5rem;">
-                <a href="#" class="cta-button secondary" onclick="alert('Full documentation coming after first pilot data is collected.'); return false;">Read Full Documentation (Coming Soon)</a>
-            </p>
+            <a href="lineage.html" class="cta-button">Read the Full Framework</a>
+                <span style="background: #27ae60; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; margin-left: 1rem;">v2.0 — Updated Protocol</span>
+            <a href="stories.html" class="cta-button secondary">See It in Action</a>
         </section>
         
         <!-- FOLLOW ALONG -->
         <section id="follow">
-            <h2>Follow the Journey</h2>
+            <h2>Follow Along</h2>
             
-            <p>I'm sharing this journey publicly — the progress, the setbacks, the lessons. If you're curious, skeptical, or want to learn from the experiment, follow along.</p>
+            <p>I'm publishing this journey publicly — the wins, the failures, the lessons. If you want to follow, here's where:</p>
             
             <div class="social-links">
-                <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/YOUR_TWITTER" target="_blank">Twitter/X</a>
-                <a href="mailto:YOUR_EMAIL">Email</a>
+                <a href="https://linkedin.com/in/martinbeyst" target="_blank">LinkedIn</a>
+                <a href="https://github.com/mbeyst/dynamic-trilateral" target="_blank">GitHub</a>
+                <a href="https://dynamictrilateral.org" target="_blank">Website</a>
             </div>
             
-            <form id="follow-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                <label for="name">Your Name</label>
+            <p>Or get in touch directly:</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
                 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
                 
-                <label for="interest">Why are you following?</label>
-                <select id="interest" name="interest">
-                    <option value="">Select...</option>
-                    <option value="curious">Just curious about the idea</option>
-                    <option value="skeptical">Skeptical but want to see what happens</option>
-                    <option value="might-pilot">Might want to pilot this</option>
-                    <option value="researcher">Researcher / academic</option>
-                    <option value="other">Other</option>
-                </select>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
                 
-                <label for="note">Anything you want to say? (optional)</label>
-                <textarea id="note" name="note" placeholder="Questions, thoughts, challenges..."></textarea>
-                
-                <button type="submit" class="cta-button">Follow the Journey</button>
-                
-                <p class="form-note" style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
-                    No spam. Occasional updates on the journey. Unsubscribe anytime.
-                </p>
+                <button type="submit" class="cta-button">Send</button>
             </form>
         </section>
         
@@ -604,13 +471,24 @@
         <section id="join">
             <h2>Join the Pilot</h2>
             
-            <p>Following is great. Piloting is better. If you lead an organization (church, nonprofit, Christian business) and you're willing to test this framework, let's talk.</p>
+            <p>I'm looking for 2-3 organizations to test Triangle for 30 days. Here's what's involved:</p>
             
-            <div class="honesty-box">
-                <strong>What you're signing up for:</strong> This is unproven. You're not adopting a polished system — you're helping build one. 3-month minimum commitment. Monthly check-ins. Honest feedback required.
-            </div>
+            <ul>
+                <li><strong>Form one triangle</strong> — three people for significant decisions</li>
+                <li><strong>Use the decision log</strong> — record votes, dissent, AI recommendations</li>
+                <li><strong>Weekly check-in</strong> — 15 minutes to review what's working</li>
+                <li><strong>Honest feedback</strong> — publish what you learn (anonymized if needed)</li>
+            </ul>
             
-            <form id="pilot-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <p><strong>Cost:</strong> Nothing. The framework is free (CC BY-NC 4.0).</p>
+            
+            <p><strong>Time:</strong> ~1 hour/week for the 30-day pilot.</p>
+            
+            <p><strong>What you get:</strong> Early access to tools, direct support from me, contribution to something that could change how organizations work.</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <input type="hidden" name="subject" value="Triangle Pilot Application">
+                
                 <label for="pilot-name">Your Name</label>
                 <input type="text" id="pilot-name" name="name" required>
                 
@@ -620,68 +498,28 @@
                 <label for="organization">Organization</label>
                 <input type="text" id="organization" name="organization" required>
                 
-                <label for="role">Your Role</label>
-                <input type="text" id="role" name="role" required>
-                
-                <label for="size">Organization Size</label>
-                <select id="size" name="size">
-                    <option value="">Select...</option>
-                    <option value="1-10">1-10 people</option>
-                    <option value="11-50">11-50 people</option>
-                    <option value="51-200">51-200 people</option>
-                    <option value="200+">200+ people</option>
-                </select>
-                
                 <label for="type">Organization Type</label>
                 <select id="type" name="type">
                     <option value="">Select...</option>
                     <option value="church">Church / Ministry</option>
                     <option value="nonprofit">Nonprofit / NGO</option>
-                    <option value="business">Christian Business</option>
+                    <option value="startup">Startup</option>
+                    <option value="sme">SME (10-100 employees)</option>
+                    <option value="enterprise">Enterprise (100+ employees)</option>
                     <option value="other">Other</option>
                 </select>
                 
-                <label for="why">Why are you interested? What problem are you hoping this might solve?</label>
-                <textarea id="why" name="why" required></textarea>
+                <label for="why">Why are you interested?</label>
+                <textarea id="why" name="why" required placeholder="Tell me what problem you're hoping Triangle might solve..."></textarea>
                 
-                <button type="submit" class="cta-button">Let's Talk</button>
+                <button type="submit" class="cta-button">Apply for Pilot</button>
             </form>
-        </section>
-        
-        <!-- CONTACT -->
-        <section>
-            <h2>Questions? Challenges? Ideas?</h2>
-            
-            <p>This isn't a monologue. If you see holes in the framework, better ways to test it, or organizations I should approach — tell me.</p>
-            
-            <p><strong>Email:</strong> <a href="mailto:YOUR_EMAIL" style="color: var(--accent);">YOUR_EMAIL</a></p>
-            
-            <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
-                I read every message. I can't promise to respond to all of them, but I do read them all.
-            </p>
         </section>
     </main>
     
     <footer>
-        <p>Dynamic Trilateral Leadership v0.1 &copy; 2026 Martin Beyst</p>
-        <p>Documenting the journey of bringing a new leadership framework into the world.</p>
-        <p>Framework will be released under CC BY-NC 4.0 after pilot learnings incorporated.</p>
+        <p>&copy; 2026 Martin Beyst. Released under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>.</p>
+        <p>Triangle — <em>An attempt</em></p>
     </footer>
-    
-    <script>
-        // Simple form handling
-        document.getElementById('follow-form').addEventListener('submit', function(e) {
-            alert('To make this form work: 1) Go to formspree.io, 2) Create a free form, 3) Replace YOUR_FORMSPREE_ID in the form action with your actual form ID');
-            e.preventDefault();
-        });
-        
-        document.getElementById('pilot-form').addEventListener('submit', function(e) {
-            alert('To make this form work: 1) Go to formspree.io, 2) Create a free form, 3) Replace YOUR_FORMSPREE_ID in the form action with your actual form ID');
-            e.preventDefault();
-        });
-        
-        // Update follower count manually (or connect to email list API)
-        // document.getElementById('follower-number').textContent = '47'; // Example
-    </script>
 </body>
 </html>

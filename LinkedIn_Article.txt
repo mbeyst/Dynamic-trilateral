@@ -1,0 +1,147 @@
+Triangle: A New Framework for AI Source Credibility
+
+By Martin Beyst
+July 2026
+
+---
+
+Here's the problem nobody's solving:
+
+AI systems aggregate information from countless sources. But they have no reliable way to know which sources are actually credible.
+
+Search engines use popularity (PageRank).
+Academia uses citation counts.
+Social media uses engagement.
+
+None of these measure what matters: who has been consistently right over time.
+
+---
+
+The Gap
+
+I spent the last week searching arXiv, Wikipedia, and academic databases for work on AI source credibility.
+
+What I found:
+- 17 papers on "reputation systems" + "artificial intelligence" — none about tracking human decision quality for AI source weighting
+- Wikipedia has no article on "trust in artificial intelligence"
+- Wikipedia has no article on "epistemic trust"
+
+The literature splits into two disconnected camps:
+
+1. Reputation systems research — focused on eBay, Amazon, peer-to-peer networks
+2. AI safety research — focused on alignment, guardrails, training data
+
+Nobody is connecting them.
+
+Nobody is saying: "Use tracked human decision quality to help AI determine which sources to trust."
+
+---
+
+The Idea
+
+What if AI could weight sources not by popularity, not by credentials, but by actual track record?
+
+What if the system knew:
+- Who makes good decisions in each context
+- When dissent turned out to be right
+- Who is best informed in each domain
+
+And what if that data accumulated over time — creating a reputation score based on outcomes, not attention?
+
+---
+
+Triangle
+
+Triangle is a decision architecture that makes this possible.
+
+Here's how it works:
+
+**Three people per triangle.** Significant decisions are made by three, not one. Two agree — the decision moves. One dissents — the dissent is preserved.
+
+**AI facilitates.** AI records inputs, tracks participation, aggregates outcomes. AI does not decide — humans decide. AI facilitates transparency.
+
+**Authority flows to competence.** The system tracks who makes good decisions, who dissent proves right, who is best informed. Over time, authority morphs — not to title, not to tenure, but to demonstrated competence.
+
+**At scale:** Triangles coordinate with other triangles. One triangle decides locally. Multiple triangles agree — organization-wide. The more triangles agree, the more authority a decision carries.
+
+---
+
+The Theological Foundation
+
+This isn't accidental. Triangle's structure is inspired by Social Trinitarian theology — God as three persons in perfect unity, distinct yet inseparable (Moltmann, Volf, LaCugna).
+
+This provides:
+- A model of shared authority without hierarchy
+- A model of distinction without division
+- A model of unity without uniformity
+
+I'm naming this honestly. The framework works for secular organizations, but its architectural inspiration is theological.
+
+---
+
+Application to AI
+
+Here's where it gets interesting.
+
+If Triangle is deployed across organizations, it accumulates a database of:
+- Individual decisions and their outcomes
+- Dissent records and whether dissent was retrospectively validated
+- Context-specific competence
+- Decision quality scores over time
+
+This constitutes a reputation score for decision-making — based on actual tracked outcomes.
+
+An AI system drawing on this database could weight sources by:
+- Decision track record (primary signal)
+- Dissent validation (sources whose dissent was right get higher weight)
+- Contextual competence (domain-specific track records)
+
+Not by popularity. Not by credentials.
+
+By who has been consistently right.
+
+---
+
+Why This Is Different
+
+Current AI: asks everyone in the crowd for advice.
+
+Triangle-enabled AI: asks only those who have been consistently right in this domain.
+
+This is pre-aggregation credibility scoring — not post-hoc filtering.
+
+---
+
+Implications
+
+If this were applied at scale:
+
+1. **Reduced AI hallucinations** — sources with strong track records get higher weight
+2. **Surface underrepresented expertise** — strong track records without academic affiliation gain authority
+3. **Preserve dissent intelligence** — minority insight isn't erased by majority vote
+4. **Dynamic authority** — credibility shifts as track records evolve, preventing entrenched "expert" status
+
+---
+
+Limitations
+
+- Cold start problem — requires accumulated data before scoring is meaningful
+- Gaming risk — reputation systems can be manipulated (Triangle's triadic structure mitigates this)
+- Domain transfer — competence in one area doesn't guarantee competence in another
+- Adoption barrier — requires organizational deployment before individual data accumulates
+
+---
+
+What's Next
+
+I'm publishing this as a preprint on arXiv this week. The full paper is available at triangle.ceo/paper.html
+
+I'm also looking for two partners to help build Triangle — not employees, partners. The first triangle starts with three.
+
+If you believe every voice has value — follow the journey. Become part of it.
+
+triangle.ceo
+
+---
+
+#AI #ArtificialIntelligence #DecisionMaking #Leadership #OrganizationalDesign #ReputationSystems #EpistemicTrust #Triangle #Innovation

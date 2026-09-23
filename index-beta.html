@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle | Beta</title>
+    <meta name="description" content="A new framework for organizational decision-making. Seeking pilot organizations to test and refine.">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --max-width: 700px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #fafafa;
+        }
+        
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        header .beta-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+        }
+        
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: var(--dark);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .definition-box {
+            background: var(--light);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1.05rem;
+        }
+        
+        .honesty-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .framework-item {
+            margin: 1.5rem 0;
+            padding: 1.25rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .framework-item h4 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid var(--primary);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            color: #555;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .cta-button:hover {
+            background: #2980b9;
+        }
+        
+        .cta-button.secondary {
+            background: white;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        
+        .cta-button.secondary:hover {
+            background: var(--light);
+        }
+        
+        form {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-note {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-top: -0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+        }
+        
+        .lineage-brief {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 1.5rem 0;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Triangle</h1>
+        <span class="beta-badge">Beta</span>
+        <p>Structured, Accountable, Humane Decision-Making</p>
+    </header>
+    
+    <main>
+        <section>
+            <div class="definition-box">
+                <strong>Triangle is an organizational structure where all significant decisions are made by three-person cells with recorded dissent, dynamic authority based on competence rather than title, and AI as advisory only.</strong>
+            </div>
+            
+            <div class="honesty-box">
+                <strong>Full transparency:</strong> This framework is new. It synthesizes existing ideas (Simmel's triad theory, Social Trinitarianism, servant leadership) into operational mechanisms that haven't been tested together. We're seeking pilot organizations to implement this alongside us and help refine it through real-world use.
+            </div>
+        </section>
+        
+        <section>
+            <h2>The Four Mechanisms</h2>
+            
+            <div class="framework-item">
+                <h4>1. The Triad as Minimum Stable Unit</h4>
+                <p>No person should lead alone. Each decision cell consists of three people. Small enough for accountability. Large enough for disagreement.</p>
+            </div>
+            
+            <div class="framework-item">
+                <h4>2. 2/3 Voting with Recorded Dissent</h4>
+                <p>Unanimity is preferred. When it cannot be reached, a 2/3 decision may proceed — but dissent is recorded and travels with the decision.</p>
+            </div>
+            
+            <div class="framework-item">
+                <h4>3. Dynamic Authority</h4>
+                <p>Authority shifts based on proximity to facts, track record, and vindicated dissent — not static title.</p>
+            </div>
+            
+            <div class="framework-item">
+                <h4>4. AI as Advisory Only</h4>
+                <p>AI recommends. Humans decide. Everything is logged. Responsibility stays human.</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>What We're Looking For</h2>
+            
+            <p>We need <strong>pilot organizations</strong> willing to:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem;">
+                <li>Implement one triad for one decision domain (3 months minimum)</li>
+                <li>Use the decision log template (provided)</li>
+                <li>Participate in monthly check-in calls (30 minutes)</li>
+                <li>Share honest feedback — what worked, what didn't, what broke</li>
+            </ul>
+            
+            <h3 style="margin-top: 2rem;">Ideal pilot candidates:</h3>
+            <ul style="margin-left: 2rem;">
+                <li>Christian organizations (churches, nonprofits, Christian businesses) — theological alignment helps</li>
+                <li>10-200 employees — large enough for real decisions, small enough to move quickly</li>
+                <li>Leadership open to experimentation — willing to try something unproven</li>
+                <li>At least one person who can champion the pilot internally</li>
+            </ul>
+            
+            <h3 style="margin-top: 2rem;">What you get:</h3>
+            <ul style="margin-left: 2rem;">
+                <li>Free implementation support (normally paid consulting)</li>
+                <li>Direct access to Martin Beyst (framework developer)</li>
+                <li>Co-authorship on case studies (if you choose to be named)</li>
+                <li>Early access to refined tools and templates</li>
+            </ul>
+            
+            <h3 style="margin-top: 2rem;">What this is NOT:</h3>
+            <ul style="margin-left: 2rem;">
+                <li>A sales pitch — the framework is free (CC BY-NC 4.0)</li>
+                <li>A commitment to full organizational transformation — start with one triad</li>
+                <li>A guarantee of success — we're learning together</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Where This Came From</h2>
+            
+            <p class="lineage-brief">
+                This framework synthesizes: <strong>Georg Simmel</strong> (triad stability, 1890s), <strong>Social Trinitarians</strong> (Moltmann, Volf, LaCugna — Trinity as relational model), <strong>Robert Greenleaf</strong> (servant leadership, 1970s), and <strong>distributed leadership research</strong> (2000s). The operational mechanisms (2/3 voting, systematic dissent recording, dynamic authority, AI advisory) are new. Full lineage documentation will be published after pilot learnings are incorporated.
+            </p>
+        </section>
+        
+        <section>
+            <h2>Volunteer for the Pilot</h2>
+            
+            <p>If you're interested in testing this framework in your organization, fill out the form below. No pressure, no sales follow-up — just a conversation about whether this might work for you.</p>
+            
+            <form id="pilot-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="organization">Organization</label>
+                <input type="text" id="organization" name="organization" required>
+                
+                <label for="role">Your Role</label>
+                <input type="text" id="role" name="role" required>
+                
+                <label for="size">Organization Size</label>
+                <select id="size" name="size">
+                    <option value="">Select...</option>
+                    <option value="1-10">1-10 people</option>
+                    <option value="11-50">11-50 people</option>
+                    <option value="51-200">51-200 people</option>
+                    <option value="200+">200+ people</option>
+                </select>
+                
+                <label for="type">Organization Type</label>
+                <select id="type" name="type">
+                    <option value="">Select...</option>
+                    <option value="church">Church / Ministry</option>
+                    <option value="nonprofit">Nonprofit / NGO</option>
+                    <option value="business">Christian Business</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="interest">Why are you interested? What problem are you hoping this might solve?</label>
+                <textarea id="interest" name="interest" required></textarea>
+                
+                <p class="form-note">We'll respond within 7 days. If we move forward, we'll schedule a 30-minute exploratory call.</p>
+                
+                <button type="submit" class="cta-button">Submit Interest</button>
+            </form>
+            
+            <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                <strong>Prefer email?</strong> Contact Martin directly: <a href="mailto:YOUR_EMAIL_HERE" style="color: var(--accent);">YOUR_EMAIL_HERE</a>
+            </p>
+        </section>
+        
+        <section>
+            <h2>Download the Decision Log Template</h2>
+            
+            <p>Want to experiment on your own first? Download the basic decision log template and try it with your team.</p>
+            
+            <div style="background: var(--light); border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; font-family: 'Courier New', monospace; font-size: 0.85rem; overflow-x: auto;">
+<strong>DECISION LOG ENTRY</strong>
+─────────────────────────────────────────────────────────
+Date: [YYYY-MM-DD]
+Triad Members: [Name 1], [Name 2], [Name 3]
+Decision Domain: [e.g., Capital Allocation, Product Strategy]
+
+Question:
+[What decision is being made?]
+
+AI Recommendation (if applicable):
+[What did AI advise? Include confidence level if available]
+
+Votes:
+- [Name 1]: [For/Against/Abstain]
+- [Name 2]: [For/Against/Abstain]
+- [Name 3]: [For/Against/Abstain]
+
+Outcome: [Approved/Rejected/Deferred]
+
+Dissent (if any):
+[Name]: [Full statement of dissenting view. Do not summarize.]
+
+Follow-up Date: [When will this decision be reviewed?]
+Follow-up Result: [Was the decision vindicated? Was dissent vindicated?]
+─────────────────────────────────────────────────────────
+            </div>
+            
+            <p style="font-size: 0.9rem; color: #666;">
+                Copy this into your preferred format (Google Doc, Word, Notion). Use it for one month. See what you learn.
+            </p>
+        </section>
+        
+        <section>
+            <h2>Questions?</h2>
+            
+            <p>This is a conversation, not a pitch. If you have questions about the framework, the pilot, or whether this might work for your context, reach out.</p>
+            
+            <p><strong>Contact:</strong> <a href="mailto:YOUR_EMAIL_HERE" style="color: var(--accent);">YOUR_EMAIL_HERE</a></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Triangle v0.1 (Beta) &copy; 2026 Martin Beyst</p>
+        <p>Seeking pilot organizations. Framework will be released under CC BY-NC 4.0 after pilot learnings incorporated.</p>
+        <p>First published: 2026</p>
+    </footer>
+    
+    <script>
+        // Simple form handling - replace Formspree ID with your own
+        document.getElementById('pilot-form').addEventListener('submit', function(e) {
+            // Remove this comment and add your Formspree ID in the form action above
+            // Get a free Formspree form at https://formspree.io/
+            alert('To make this form work: 1) Go to formspree.io, 2) Create a free form, 3) Replace YOUR_FORMSPREE_ID in the form action with your actual form ID');
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

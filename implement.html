@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implement | Triangle</title>
+    <meta name="description" content="Practical guides, templates, and tools for implementing Triangle in your organization.">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --max-width: 800px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #fafafa;
+        }
+        
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        
+        nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            color: var(--dark);
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .step-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .step-card h4 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .template-box {
+            background: var(--light);
+            border: 2px dashed var(--primary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin: 1rem 0;
+        }
+        
+        .checklist li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        .challenge-card {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .challenge-card h4 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: background 0.2s;
+        }
+        
+        .cta-button:hover {
+            background: #2980b9;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+        
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid var(--primary);
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            color: #555;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Implement</h1>
+        <p>Practical Guides and Templates</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html#framework">The Framework</a></li>
+            <li><a href="index.html#problems">Problems Solved</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="lineage.html">Lineage</a></li>
+            <li><a href="implement.html">Implement</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <p>Triangle is designed to be implemented, not just admired.</p>
+            <p><strong>Start small.</strong> Pick one decision area. Form one triangle. Track one month of decisions. Learn. Expand.</p>
+        </section>
+        
+        <section>
+            <h2>Step 1: Form Your First Triangle</h2>
+            
+            <div class="step-card">
+                <h4>Who Should Be in the Triangle?</h4>
+                
+                <p><strong>For executive decisions:</strong></p>
+                <ul style="margin-left: 2rem;">
+                    <li>CEO/Executive Director</li>
+                    <li>Operations lead</li>
+                    <li>Finance/Strategy lead</li>
+                </ul>
+                
+                <p style="margin-top: 1rem;"><strong>For board decisions:</strong></p>
+                <ul style="margin-left: 2rem;">
+                    <li>Board chair</li>
+                    <li>One subject-matter expert</li>
+                    <li>One independent voice (not aligned with either)</li>
+                </ul>
+                
+                <p style="margin-top: 1rem;"><strong>For project decisions:</strong></p>
+                <ul style="margin-left: 2rem;">
+                    <li>Project lead</li>
+                    <li>Technical expert</li>
+                    <li>Stakeholder representative</li>
+                </ul>
+            </div>
+            
+            <div class="step-card">
+                <h4>What to Avoid</h4>
+                <ul style="margin-left: 2rem;">
+                    <li><strong>Dyads</strong> — Two people collapse into conflict without a tiebreaker</li>
+                    <li><strong>Large committees</strong> — Five+ people diffuse accountability</li>
+                    <li><strong>Homogeneous triangles</strong> — Three people with identical expertise miss blind spots</li>
+                </ul>
+            </div>
+            
+            <div class="step-card">
+                <h4>Triangle Design Checklist</h4>
+                <ul class="checklist">
+                    <li>Three people, distinct perspectives</li>
+                    <li>Clear decision domain (what this triangle decides)</li>
+                    <li>Meeting rhythm established (weekly? per-decision?)</li>
+                    <li>Decision log created (shared, accessible)</li>
+                    <li>AI advisory access configured (if applicable)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Step 2: Establish Decision Rules</h2>
+            
+            <div class="step-card">
+                <h4>The Consensus-First Voting Rule</h4>
+                <ol style="margin-left: 2rem;">
+                    <li><strong>Facilitator aims for genuine consensus</strong> — extract information and disagreement from everyone. Not agreeing for the sake of it.</li>
+                    <li><strong>When consensus fails, 2/3 carries</strong> — A simple majority within the triangle</li>
+                    <li><strong>If facilitator is in the minority</strong> — they must represent the majority. Not override it.</li>
+                    <li><strong>Dissent is recorded</strong> — The minority view is logged with the decision</li>
+                </ol>
+            </div>
+            
+            <div class="step-card">
+                <h4>Facilitator Selection</h4>
+                <ol style="margin-left: 2rem;">
+                    <li><strong>Volunteer</strong> — Anyone who wants to be facilitator volunteers</li>
+                    <li><strong>Everyone votes</strong> — No self-voting allowed</li>
+                    <li><strong>Tiebreaker</strong> — External authority decides, or surrender to chance (coin flip)</li>
+                    <li><strong>Recorded</strong> — When tiebreaker used, it is logged publicly</li>
+                </ol>
+            </div>
+            
+            <div class="step-card">
+                <h4>The Decision Map</h4>
+                <p>Decisions are not flat. Some depend on others. The Map makes the sequence visible.</p>
+                <ol style="margin-left: 2rem;">
+                    <li><strong>Nodes</strong> — Each decision is a node on the Map</li>
+                    <li><strong>Arrows</strong> — Show dependencies between decisions</li>
+                    <li><strong>No loops</strong> — Forward only. Circular dependencies are flagged by AI</li>
+                    <li><strong>Parallel</strong> — Some decisions can happen simultaneously</li>
+                </ol>
+            </div>
+            
+            <div class="step-card">
+                <h4>Lock & Forward</h4>
+                <ol style="margin-left: 2rem;">
+                    <li><strong>Complete all four steps</strong> → decision is locked</li>
+                    <li><strong>No going back</strong> — The team moves to the next decision</li>
+                    <li><strong>Challenge path</strong> — Two non-originating triangles can reopen a lock</li>
+                    <li><strong>Authorized override</strong> — CEO or equivalent managing the system can reopen unilaterally, with full public logging</li>
+                </ol>
+            </div>
+            
+            <div class="step-card">
+                <h4>Decision Requests</h4>
+                <p>When Team B needs a decision from Team A before they can proceed:</p>
+                <ol style="margin-left: 2rem;">
+                    <li><strong>Team B sends request</strong> — becomes a node on Team A's Map</li>
+                    <li><strong>Timer starts</strong> — adjustable in dashboard</li>
+                    <li><strong>Team A completes four steps</strong> → locked → Team B notified</li>
+                    <li><strong>Team A doesn't respond</strong> → timeout → "No Decision" lock → Team B notified</li>
+                </ol>
+            </div>
+            
+            <div class="step-card">
+                <h4>The Challenge Rule</h4>
+                <ol style="margin-left: 2rem;">
+                    <li><strong>Two non-originating triangles</strong> must agree to challenge</li>
+                    <li><strong>Decider is excluded</strong> from the challenge vote</li>
+                    <li><strong>Biblical pattern</strong> — by the mouth of two or three witnesses</li>
+                    <li><strong>Fractal</strong> — same threshold at every scale</li>
+                </ol>
+            </div>
+            
+            <div class="step-card">
+                <h4>Dynamic Authority Protocol</h4>
+                <p>Authority shifts based on:</p>
+                <ol style="margin-left: 2rem;">
+                    <li><strong>Proximity to facts</strong> — Who is closest to the situation?</li>
+                    <li><strong>Track record</strong> — Whose prior judgments proved accurate?</li>
+                    <li><strong>Vindicated dissent</strong> — Whose past objections were proven right?</li>
+                    <li><strong>Facilitator assignment</strong> — The person chosen to run the four-step process for this decision</li>
+                </ol>
+                <blockquote>Example: In a safety crisis, the field coordinator leads the decision — not the CFO, not the CEO. The triangle decides who has authority per decision.</blockquote>
+            </div>
+            
+            <div class="step-card">
+                <h4>AI Dependency Tool Protocol</h4>
+                <ol style="margin-left: 2rem;">
+                    <li><strong>AI listens during meetings</strong> — Flags new decisions as they emerge</li>
+                    <li><strong>Suggests dependencies</strong> — What the new decision depends on, what depends on it</li>
+                    <li><strong>Auto-sequences</strong> — Suggests where the new decision fits in the Map</li>
+                    <li><strong>Flags conflicts</strong> — Identifies circular dependencies and cross-team blockers</li>
+                    <li><strong>Human confirmation required</strong> — AI advises, humans approve. Always.</li>
+                </ol>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Step 3: Use the Decision Log</h2>
+            
+            <div class="template-box">
+<strong>DECISION LOG ENTRY</strong>
+─────────────────────────────────────────────────────────
+Date: [YYYY-MM-DD]
+Triangle Members: [Name 1], [Name 2], [Name 3]
+Facilitator: [Name]
+Decision Domain: [e.g., Capital Allocation, Product Strategy]
+Dependencies: [What does this depend on? What depends on it?]
+
+Question:
+[What decision is being made?]
+
+Frame Notes:
+[Clarified question before anyone spoke]
+
+AI Recommendation (if applicable):
+[Suggested dependencies, flagged conflicts, sequence suggestions]
+
+Discussion Summary:
+[Information extracted from all participants. Disagreement surfaced.]
+
+Consensus Attempted: [Yes/No]
+Consensus Reached: [Yes/No]
+
+Vote (if consensus not reached):
+- [Name 1]: [For/Against/Abstain]
+- [Name 2]: [For/Against/Abstain]
+- [Name 3]: [For/Against/Abstain]
+- Outcome: [Approved/Rejected/Deferred]
+- If facilitator was in minority: [Facilitator represented majority — Y/N]
+
+Dissent (if any):
+[Name]: [Full statement of dissenting view. Do not summarize. Preserve the actual reasoning.]
+
+Decision Recorded By: [Name]
+
+Move (Execution):
+[What happens next? Who does what by when?]
+
+Follow-up Date: [When will this decision be reviewed?]
+Follow-up Result: [Was the decision vindicated? Was dissent vindicated?]
+
+Locked: [Yes — once all four steps complete]
+─────────────────────────────────────────────────────────
+            </div>
+            
+            <div class="step-card">
+                <h4>Best Practices</h4>
+                <ul style="margin-left: 2rem;">
+                    <li><strong>Record dissent verbatim</strong> — Don't summarize. Preserve the actual reasoning.</li>
+                    <li><strong>Set follow-up dates</strong> — Every decision gets reviewed in 3-6 months.</li>
+                    <li><strong>Track who was right</strong> — This builds the track record for dynamic authority.</li>
+                    <li><strong>Make it accessible</strong> — New triangle members should read past decisions during onboarding.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Step 4: Review and Learn</h2>
+            
+            <div class="step-card">
+                <h4>Monthly Triangle Review</h4>
+                <p>Once per month, the triangle reviews:</p>
+                <ul style="margin-left: 2rem;">
+                    <li><strong>Decisions made</strong> — What did we decide?</li>
+                    <li><strong>Dissent patterns</strong> — Who dissented? Were they right?</li>
+                    <li><strong>Authority shifts</strong> — Did the right person lead each decision?</li>
+                    <li><strong>AI accuracy</strong> — When did AI recommend correctly? When did humans overrule wisely?</li>
+                </ul>
+            </div>
+            
+            <div class="step-card">
+                <h4>Quarterly Expansion</h4>
+                <p>After one quarter of successful triangle operation:</p>
+                <ul style="margin-left: 2rem;">
+                    <li><strong>Document what worked</strong> — What decision types fit the triangle model?</li>
+                    <li><strong>Identify gaps</strong> — What decisions are still solo? Why?</li>
+                    <li><strong>Form new triangles</strong> — Expand to adjacent decision domains</li>
+                    <li><strong>Train new members</strong> — Bring more people into the Triangle framework</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Common Implementation Challenges</h2>
+            
+            <div class="challenge-card">
+                <h4>"This feels slower than one person deciding"</h4>
+                <p><strong>Response:</strong> It is — initially. But decision <em>quality</em> improves, and implementation is faster because dissent was heard upfront.</p>
+                <p><strong>Mitigation:</strong> Start with high-stakes decisions only. Don't triangle every small choice.</p>
+            </div>
+            
+            <div class="challenge-card">
+                <h4>"Recording dissent feels uncomfortable"</h4>
+                <p><strong>Response:</strong> Good. That means it's working. Discomfort means you're breaking the harmony-at-all-costs pattern.</p>
+                <p><strong>Mitigation:</strong> Frame dissent as "institutional memory" not "obstruction." You're preserving intelligence for future triangles.</p>
+            </div>
+            
+            <div class="challenge-card">
+                <h4>"AI recommendations feel authoritative"</h4>
+                <p><strong>Response:</strong> That's the risk. AI is advisory, not decisive. The triangle must consciously affirm or overrule.</p>
+                <p><strong>Mitigation:</strong> Always record the AI recommendation separately from the human vote. Make the overrule explicit.</p>
+            </div>
+            
+            <div class="challenge-card">
+                <h4>"Who decides when authority shifts?"</h4>
+                <p><strong>Response:</strong> The triangle decides — dynamically, per decision. This requires humility and honest track-record review.</p>
+                <p><strong>Mitigation:</strong> Use the decision log. Data beats hierarchy. If someone's dissent has been vindicated three times, they lead the next related decision.</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Downloadable Templates</h2>
+            
+            <ul style="margin-left: 2rem; line-height: 2.5;">
+                <li>📄 <a href="#" style="color: var(--accent);">Decision Log Template (Google Docs)</a></li>
+                <li>📄 <a href="#" style="color: var(--accent);">Decision Log Template (Word)</a></li>
+                <li>📄 <a href="#" style="color: var(--accent);">Triangle Formation Checklist (PDF)</a></li>
+                <li>📄 <a href="#" style="color: var(--accent);">AI Advisory Setup Guide (PDF)</a></li>
+                <li>📊 <a href="#" style="color: var(--accent);">Monthly Review Template (Google Sheets)</a></li>
+            </ul>
+            
+            <p style="margin-top: 1.5rem; font-style: italic; color: #666;">Templates coming soon. For now, copy the decision log template above into your preferred format.</p>
+        </section>
+        
+        <section>
+            <h2>Training and Support</h2>
+            
+            <p>The framework is free. Implementation support is available.</p>
+            
+            <ul style="margin-left: 2rem; line-height: 2;">
+                <li><strong>Self-guided:</strong> Download templates, read the guides, implement independently.</li>
+                <li><strong>Consulting:</strong> Martin Beyst offers implementation consulting for organizations wanting hands-on support.</li>
+                <li><strong>Training:</strong> Certification programs for consultants who want to implement Triangle with their own clients.</li>
+            </ul>
+            
+            <p style="margin-top: 1.5rem;"><strong>Contact:</strong> [email to be added]</p>
+        </section>
+        
+        <section style="text-align: center; margin-top: 3rem;">
+            <a href="stories.html" class="cta-button">Read Stories</a>
+            <a href="lineage.html" class="cta-button" style="margin-left: 1rem;">View Lineage</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Triangle v1.0 &copy; 2026 Martin Beyst</p>
+        <p>CC BY-NC 4.0 — Free for non-commercial use with attribution</p>
+    </footer>
+</body>
+</html>

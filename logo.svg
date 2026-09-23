@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Triangle Logo - Minimal three-point design -->
+  
+  <!-- Main triangle outline -->
+  <path d="M100 30 L170 150 L30 150 Z" 
+        fill="none" 
+        stroke="#2c3e50" 
+        stroke-width="8" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- Three connection points (the triad members) -->
+  <circle cx="100" cy="30" r="10" fill="#3498db"/>
+  <circle cx="170" cy="150" r="10" fill="#3498db"/>
+  <circle cx="30" cy="150" r="10" fill="#3498db"/>
+  
+  <!-- Inner triangle (the system/architecture) -->
+  <path d="M100 55 L145 135 L55 135 Z" 
+        fill="none" 
+        stroke="#3498db" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        opacity="0.6"/>
+  
+  <!-- Center point (the decision/core) -->
+  <circle cx="100" cy="105" r="6" fill="#2c3e50"/>
+</svg>
